@@ -1,22 +1,19 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <title>Blog Django Girls</title>
 </head>
 <body>
-    
     <div>
-        <h1><a href="/">Blog Django Girls</a></h1>
-        <p>Desenvolvido por Jeneffer Rayssa Oliveira Santana</p>
-        <p>IFPI-parnaiba</p>
-        <p>Topicos especiais em desenvolvimento </p>
-        <p>professor Antonio Sousa</p>
+        div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
 
-    </div>
+    {% for post in posts %}
     <div>
-        <h2><a href=""> inicio </a></h2>
-        <p></p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 </body>
 </html>
